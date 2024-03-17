@@ -1,0 +1,69 @@
+<head>
+  <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="grid">
+    <div class="lg:col-8 flex-column flex">
+      <div class="container-video">
+        <video
+          #videoPlayer
+          id="my-video"
+          class="video-js border-round-xl w-full h-30rem bg-cover"
+          preload="auto"
+          poster="../assets/img/3ZIpjMqhTTYhd.jpg"
+        >
+          <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div
+        class="control flex justify-content-between bg-primary border-round-xl"
+      >
+        <p-button
+          icon="pi pi-fast-backward"
+          (click)="fastBackward()"
+        ></p-button>
+        <div class="play-refresh flex flex-row gap-1">
+          <p-button icon="{{ icon }}" (click)="clickPlay()"></p-button>
+          <p-button icon="pi pi-refresh" (click)="refresh()"></p-button>
+        </div>
+        <p-button icon="pi pi-fast-forward" (click)="fastForward()"></p-button>
+      </div>
+      <div class="title pt-3">
+        <span class="text-4xl"
+          >Birds attack the interior of the sea to look for prey, namely fish in
+          the ocean</span
+        >
+      </div>
+    </div>
+    <div class="lg:col-4">
+      <div class="description mx-2 mt-1 shadow-2 h-full border-round-xl">
+        <div class="content-description px-2 pt-2 flex flex-column gap-4">
+          <span class="text-2xl font-bold text-600">About Bird</span>
+          <div class="paragraph grid flex flex-column gap-2">
+            <img
+              class="border-round-xl"
+              src="../assets/img/burung-selam.jpg"
+              alt=""
+            />
+            <span class="text-lg text-600 text-justify line-height-2"
+              >Diving birds or diving ducks are a group of aquatic birds found
+              in various places in North America and southern Eurasia. All
+              living species of diving birds are members of the genus Gavia, the
+              family Gaviidae, and the order Gaviiformes, all of which describe
+              them only.
+            </span>
+            <span class="text-lg text-600 text-justify line-height-2">
+              Diving birds are the size of large ducks or small geese, sometimes
+              looking similar to both types of animals when they swim. Their
+              plumage is primarily white and black, with gray on the head and
+              neck in some species, and white belly feathers. All species of
+              this genus have spear-shaped beaks.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+</body>
